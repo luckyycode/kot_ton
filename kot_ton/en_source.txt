@@ -1,2 +1,2 @@
-hit
+cat
 dog
