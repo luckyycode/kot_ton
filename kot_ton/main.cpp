@@ -131,6 +131,11 @@ int main( int argc, char ** argv ) {
     
     wide_stream_words.close();
     
+    if( start.size() != end.size() ) {
+        com_error( "Begin and destination words must be the same length.\n" );
+        return -1;
+    }
+    
     //start = L"кот"; end = L"тон";
 
     // Begin(first) word.
