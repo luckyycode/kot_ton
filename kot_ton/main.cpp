@@ -66,10 +66,6 @@ int main( int argc, char ** argv ) {
     //FILE * source_dict = NULL;
     std::wifstream wide_stream_words; // UTF-8.
     std::wifstream wide_stream_dict;
-
-    //
-    // Default values.
-    std::wstring start, end;
     
     //
     // Default word dictionary data, read from file later.
@@ -80,7 +76,7 @@ int main( int argc, char ** argv ) {
     
     std::queue<std::wstring> word_data;
     std::map<std::wstring, bool> last_seen;
-    std::wstring last_str, prev_str;
+    std::wstring last_str, prev_str, start, end;
     
     int ar_size = 1, ar_prev = 1, total_words = /* start */ 1, /* temp = */ is_eng = 0;
     wchar_t prev, preferred_fal = 0, preferred_lal = 0;
