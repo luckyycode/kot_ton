@@ -224,10 +224,14 @@ void com_error( const char * err ) {
 void com_pause() {
 #ifdef _WIN32
     system( "pause" );
-#else
+#elif __APPLE__
     system( "read -n 1 -s -p \"Press any key to continue...\n\"" );
-    printf( "\n" );
+#else 
+    std::cin.ignore();
+    std::cin.get();
 #endif
+    
+    printf( "\n" );
 }
 
 /**
