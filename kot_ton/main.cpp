@@ -13,7 +13,7 @@
 #include <unordered_set>
 #include <queue>
 #include <map>
-#include <codecvt>  // utf16/utf8
+//#include <codecvt>  // utf16/utf8
 #include <locale>   // ru_ru
 #include <wchar.h>  // wchar_t for wide char type
 
@@ -51,7 +51,7 @@ int main( int argc, char ** argv ) {
 
     //
     // Set locale.
-    std::locale rus( "ru_RU" ); // Independ ( rus/eng ).
+    std::locale rus( "ru_RU.UTF-8" ); // Independ ( rus/eng ).
     std::wcout.imbue( rus ); // Wide cout locale.
 
     //const char *funnything = "а А";
@@ -70,9 +70,6 @@ int main( int argc, char ** argv ) {
     //
     // Default word dictionary data, read from file later.
     std::unordered_set<std::wstring> dict;
-    
-    // = { L"бог", L"год", L"бег", L"гег", L"геб", L"гоб", L"кот", L"ток", L"тот", L"тон", L"нот" };
-    // = { L"kot", L"ton", L"tan", L"not", L"hat", L"hot", L"cat", L"hit", L"cog", L"cig", L"hot", L"rot", L"tot", L"got", L"hot", L"hat", L"dog", L"god", L"gog", L"odd", L"yes", L"tog", L"got", L"tag", L"hah", L"hoh", L"toh", L"tat", L"gag"  };
     
     std::queue<std::wstring> word_data;
     std::map<std::wstring, bool> last_seen;
@@ -116,8 +113,8 @@ int main( int argc, char ** argv ) {
     
     //
     // UTF-8 text data.
-    wide_stream_words.imbue( std::locale( wide_stream_words.getloc(), new std::codecvt_utf8<wchar_t> ) );
-    wide_stream_dict.imbue( std::locale( wide_stream_dict.getloc(), new std::codecvt_utf8<wchar_t> ) );
+    wide_stream_words.imbue( rus );
+    wide_stream_dict.imbue( rus );
     
     //
     // Read data.

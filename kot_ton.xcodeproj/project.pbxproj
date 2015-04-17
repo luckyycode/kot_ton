@@ -27,6 +27,10 @@
 		7EB8B6331AE058DF005B9044 /* kot_ton */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kot_ton; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB8B6361AE058DF005B9044 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7EB8B6411AE16B1A005B9044 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		7EFB683C1AE1BB5200410651 /* en_dict.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = en_dict.txt; sourceTree = "<group>"; };
+		7EFB683D1AE1BB5200410651 /* en_source.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = en_source.txt; sourceTree = "<group>"; };
+		7EFB683E1AE1BB5200410651 /* ru_dict.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ru_dict.txt; sourceTree = "<group>"; };
+		7EFB683F1AE1BB5200410651 /* ru_source.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ru_source.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,10 @@
 		7EB8B6351AE058DF005B9044 /* kot_ton */ = {
 			isa = PBXGroup;
 			children = (
+				7EFB683C1AE1BB5200410651 /* en_dict.txt */,
+				7EFB683D1AE1BB5200410651 /* en_source.txt */,
+				7EFB683E1AE1BB5200410651 /* ru_dict.txt */,
+				7EFB683F1AE1BB5200410651 /* ru_source.txt */,
 				7EB8B6361AE058DF005B9044 /* main.cpp */,
 			);
 			path = kot_ton;
@@ -244,6 +252,7 @@
 				7EB8B63C1AE058DF005B9044 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
