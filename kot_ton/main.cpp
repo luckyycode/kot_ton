@@ -190,7 +190,7 @@ int main( int argc, char ** argv ) {
             }
         }
         
-        total_words = static_cast<int>( word_data.size() ); // td: make c++ cast
+        total_words = (int)word_data.size(); // td: make c++ cast
         ar_prev = ar_size;
         
         ++ar_size;
