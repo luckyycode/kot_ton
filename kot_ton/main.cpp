@@ -25,11 +25,11 @@ const wchar_t RU_FAL = L'а';    // Russian.
 const wchar_t RU_LAL = L'я';
 
 // Dictionary file names.
-const char * DICT_RUSSIAN = "ru_dict.txt";
-const char * DICT_ENGLISH = "en_dict.txt";
+const char * DEF_DICT_RUSSIAN = "ru_dict.txt";
+const char * DEF_DICT_ENGLISH = "en_dict.txt";
 
-const char * SRC_RUSSIAN = "ru_source.txt";
-const char * SRC_ENGLISH = "en_source.txt";
+const char * DEF_SRC_RUSSIAN = "ru_source.txt";
+const char * DEF_SRC_ENGLISH = "en_source.txt";
 
 //
 //  Error.
@@ -70,10 +70,11 @@ int main( int argc, char ** argv ) {
     //
     // Default word dictionary data, read from file later.
     std::unordered_set<std::wstring> dict;
-    
     std::queue<std::wstring> word_data;
     std::map<std::wstring, bool> last_seen;
+    
     std::wstring last_str, prev_str, start, end;
+    std::string word_file, dict_file;
     
     int ar_size = 1, ar_prev = 1, total_words = /* start */ 1, /* temp = */ is_eng = 0;
     wchar_t prev, preferred_fal = 0, preferred_lal = 0;
@@ -92,12 +93,20 @@ int main( int argc, char ** argv ) {
         preferred_fal = EN_FAL;
         preferred_lal = EN_LAL;
     }
-
+    
+    std::cout << "Введите путь и имя файла который содержит исходное и конечное слово: " << "\n";
+    std::cin >> word_file;
+    std::cout << "Введите путь и имя файла который содержит словарь: " << "\n";
+    std::cin >> dict_file;
+    
     dict.clear();
     
     //
     // Words.
-    wide_stream_words.open( (is_eng == 1 ? SRC_ENGLISH : SRC_RUSSIAN) );
+    printf( "Dictionary: %s\n", word_file.c_str() );
+    printf( "Words: %s\n", dict_file.c_str() );
+    
+    wide_stream_words.open( word_file.c_str() );
     if( !wide_stream_words.is_open() ) {
         com_error( "Couldn't find source word data.. \n" );
         return -1;
@@ -105,7 +114,7 @@ int main( int argc, char ** argv ) {
 
     //
     // Fill our dictionary.
-    wide_stream_dict.open( (is_eng == 1 ? DICT_ENGLISH : DICT_RUSSIAN) );
+    wide_stream_dict.open( dict_file.c_str() );
     if( !wide_stream_dict.is_open() ) {
         com_error( "Couldn't find dictionary data...\n" );
         return -1;
