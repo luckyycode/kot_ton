@@ -26,8 +26,10 @@ const wchar_t EN_LAL = L'z';
 const wchar_t RU_FAL = L'а';    // Russian.
 const wchar_t RU_LAL = L'я';
 
+// #define USE_ANY_PAUSE
+// #define USE_ENGLISH_FOR_TEST
 
-TEST_CASE( "Main application" ) {
+TEST_CASE( "Main application", "main" ) {
     
     std::locale rus( "ru_RU.UTF-8" ); // Independ ( rus/eng ).
     
@@ -60,10 +62,16 @@ TEST_CASE( "Main application" ) {
     // Language chooser.
     INFO( "User input testing.. " );
     
+#ifdef USE_ANY_PAUSE
     std::cout << "Русский(0) или Английский(1)?" << "\n";
-    
     REQUIRE( fscanf( stdin, "%i", &is_eng ) );
-    
+#else
+#ifndef USE_ENGLISH_FOR_TEST
+    is_eng = 0;
+#else 
+    is_eng = 1;
+#endif
+#endif
     if( is_eng == 0 ) {
         std::cout << "Язык: Русский." << "\n";
         preferred_fal = RU_FAL;
@@ -76,11 +84,20 @@ TEST_CASE( "Main application" ) {
     }
     
     INFO( "Getting file names.. " );
+#ifdef USE_ANY_PAUSE
     std::cout << "Введите путь и имя файла который содержит исходное и конечное слово: " << "\n";
     std::cin >> word_file;
     std::cout << "Введите путь и имя файла который содержит словарь: " << "\n";
     std::cin >> dict_file;
-    
+#else 
+#ifndef USE_ENGLISH_FOR_TEST
+    word_file = "/Users/nekocode/Desktop/kot_ton/kot_ton/ru_source.txt";
+    dict_file = "/Users/nekocode/Desktop/kot_ton/kot_ton/ru_dict.txt";
+#else 
+    word_file = "/Users/nekocode/Desktop/kot_ton/kot_ton/en_source.txt";
+    dict_file = "/Users/nekocode/Desktop/kot_ton/kot_ton/en_dict.txt";
+#endif
+#endif
     REQUIRE( word_file.c_str() ); // != 0  ( strlen )
     REQUIRE( dict_file.c_str() ); // != 0  ( strlen )
 
@@ -163,7 +180,7 @@ TEST_CASE( "Main application" ) {
                     last_str[i] = o;
                     
                     if( last_str == end ) {
-                        INFO( "Last stage.." );
+                        INFO( "Previous stage.." );
                         REQUIRE( prev_str.c_str() );
                         
                         std::wcout << prev_str << "\n";
@@ -186,7 +203,7 @@ TEST_CASE( "Main application" ) {
         
         total_words = (int)word_data.size(); // td: make c++ cast
         
-        CHECK( total_words == (int)word_data.size() );
+        //CHECK( total_words == (int)word_data.size() );
         
         ++ar_size;
         

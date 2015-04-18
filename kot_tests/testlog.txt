@@ -1,23 +1,175 @@
-Русский(0) или Английский(1)?
-0
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+kot_tests is a Catch v1.1 b1 host application.
+Run with -? for options
+
+-------------------------------------------------------------------------------
+Main application
+-------------------------------------------------------------------------------
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:32
+...............................................................................
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:39:
+PASSED:
+REQUIRE( !strcmp( setlocale( 0, "ru_RU.UTF-8"), "ru_RU.UTF-8" ) )
+with expansion:
+true
+with message:
+Checking ru_RU/UTF8 support..
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:44:
+PASSED:
+CHECK( (int)RU_FAL == 1072 )
+with expansion:
+1072 == 1072
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:45:
+PASSED:
+CHECK( (int)RU_LAL == 1103 )
+with expansion:
+1103 == 1103
+
 Язык: Русский.
-Введите путь и имя файла который содержит исходное и конечное слово:
-/Users/nekocode/Desktop/kot_ton/kot_ton/ru_source.txt
-Введите путь и имя файла который содержит словарь:
-/Users/nekocode/Desktop/kot_ton/kot_ton/ru_dict.txt
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:101:
+PASSED:
+REQUIRE( word_file.c_str() )
+with expansion:
+true
+with messages:
+User input testing..
+Getting file names..
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:102:
+PASSED:
+REQUIRE( dict_file.c_str() )
+with expansion:
+true
+
 Dictionary: /Users/nekocode/Desktop/kot_ton/kot_ton/ru_source.txt
 Words: /Users/nekocode/Desktop/kot_ton/kot_ton/ru_dict.txt
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:110:
+PASSED:
+REQUIRE( wide_stream_words.is_open() )
+with expansion:
+true
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:113:
+PASSED:
+REQUIRE( wide_stream_dict.is_open() )
+with expansion:
+true
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:121:
+PASSED:
+REQUIRE( wide_stream_dict.getloc() == rus )
+with expansion:
+{?} == {?}
+with message:
+Checking file stream locale setup..
+
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:122:
+PASSED:
+REQUIRE( wide_stream_words.getloc() == rus )
+with expansion:
+{?} == {?}
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:133:
+PASSED:
+REQUIRE( dict.size() > 0 )
+with expansion:
+73 > 0
+with message:
+Checking dictionary size..
+
+
+-------------------------------------------------------------------------------
+Main application
+Reading source file words
+-------------------------------------------------------------------------------
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:32
+...............................................................................
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:139:
+PASSED:
+CHECK( getline( wide_stream_words, start ) )
+with expansion:
+true
+with message:
+Reading words from file..
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:140:
+PASSED:
+CHECK( getline( wide_stream_words, end ) )
+with expansion:
+true
+
+Completed in 0.000341s
+-------------------------------------------------------------------------------
+Main application
+-------------------------------------------------------------------------------
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:32
+...............................................................................
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:147:
+PASSED:
+REQUIRE( start.size() != 0 )
+with expansion:
+3 != 0
+with message:
+Checking file lengths..
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:148:
+PASSED:
+REQUIRE( end.size() != 0 )
+with expansion:
+3 != 0
+
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:150:
+PASSED:
+REQUIRE( start.size() == end.size() )
+with expansion:
+3 == 3
+
 
 Begin: кот	Destination: бог
 - --
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:206:
+PASSED:
+CHECK( total_words == (int)word_data.size() )
+with expansion:
+7 == 7
+
 кот
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:206:
+PASSED:
+CHECK( total_words == (int)word_data.size() )
+with expansion:
+17 == 17
+
 кат
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:206:
+PASSED:
+CHECK( total_words == (int)word_data.size() )
+with expansion:
+17 == 17
+
 бат
+/Users/nekocode/Desktop/kot_ton/kot_tests/test.cpp:184:
+PASSED:
+REQUIRE( prev_str.c_str() )
+with expansion:
+true
+with message:
+Previous stage..
+
 баг
 бог
 
 
 TOTAL CHARACTER CHANGES: 5
+Completed in 0.010825s
 ===============================================================================
-All tests passed (20 assertions in 1 test case)
+All tests passed (19 assertions in 1 test case)
 
+Program ended with exit code: 0

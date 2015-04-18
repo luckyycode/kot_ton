@@ -3136,17 +3136,17 @@ namespace Catch {
         listTags( false ),
         listReporters( false ),
         listTestNamesOnly( false ),
-        showSuccessfulTests( false ),
+        showSuccessfulTests( true ),
         shouldDebugBreak( false ),
         noThrow( false ),
         showHelp( false ),
         showInvisibles( false ),
-        forceColour( false ),
+        forceColour( true ),
         abortAfter( -1 ),
         rngSeed( 0 ),
         verbosity( Verbosity::Normal ),
         warnings( WarnAbout::Nothing ),
-        showDurations( ShowDurations::DefaultForReporter ),
+        showDurations( ShowDurations::Always ),
         runOrder( RunTests::InDeclarationOrder )
         {}
         
