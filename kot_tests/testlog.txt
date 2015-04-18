@@ -1,0 +1,23 @@
+Русский(0) или Английский(1)?
+0
+Язык: Русский.
+Введите путь и имя файла который содержит исходное и конечное слово:
+/Users/nekocode/Desktop/kot_ton/kot_ton/ru_source.txt
+Введите путь и имя файла который содержит словарь:
+/Users/nekocode/Desktop/kot_ton/kot_ton/ru_dict.txt
+Dictionary: /Users/nekocode/Desktop/kot_ton/kot_ton/ru_source.txt
+Words: /Users/nekocode/Desktop/kot_ton/kot_ton/ru_dict.txt
+
+Begin: кот	Destination: бог
+- --
+кот
+кат
+бат
+баг
+бог
+
+
+TOTAL CHARACTER CHANGES: 5
+===============================================================================
+All tests passed (20 assertions in 1 test case)
+

@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E8162B81AE2E1E8004AD1B3 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E8162B71AE2E1E8004AD1B3 /* test.cpp */; };
 		7EB8B6371AE058DF005B9044 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EB8B6361AE058DF005B9044 /* main.cpp */; };
 		7EB8B6421AE16B1A005B9044 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB8B6411AE16B1A005B9044 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7E8162B31AE2E1E8004AD1B3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		7EB8B6311AE058DF005B9044 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -24,6 +34,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E8162B01AE2E11F004AD1B3 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = catch.hpp; path = ../kot_ton/catch.hpp; sourceTree = "<group>"; };
+		7E8162B51AE2E1E8004AD1B3 /* kot_tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kot_tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8162B71AE2E1E8004AD1B3 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		7E8162BC1AE2F47D004AD1B3 /* testlog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testlog.txt; sourceTree = "<group>"; };
 		7EB8B6331AE058DF005B9044 /* kot_ton */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = kot_ton; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB8B6361AE058DF005B9044 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7EB8B6411AE16B1A005B9044 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -36,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E8162B21AE2E1E8004AD1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7EB8B6301AE058DF005B9044 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,11 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E8162B61AE2E1E8004AD1B3 /* kot_tests */ = {
+			isa = PBXGroup;
+			children = (
+				7E8162B01AE2E11F004AD1B3 /* catch.hpp */,
+				7E8162B71AE2E1E8004AD1B3 /* test.cpp */,
+				7E8162BC1AE2F47D004AD1B3 /* testlog.txt */,
+			);
+			path = kot_tests;
+			sourceTree = "<group>";
+		};
 		7EB8B62A1AE058DF005B9044 = {
 			isa = PBXGroup;
 			children = (
 				7EB8B6411AE16B1A005B9044 /* libstdc++.dylib */,
 				7EB8B6351AE058DF005B9044 /* kot_ton */,
+				7E8162B61AE2E1E8004AD1B3 /* kot_tests */,
 				7EB8B6341AE058DF005B9044 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				7EB8B6331AE058DF005B9044 /* kot_ton */,
+				7E8162B51AE2E1E8004AD1B3 /* kot_tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +114,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7E8162B41AE2E1E8004AD1B3 /* kot_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8162B91AE2E1E8004AD1B3 /* Build configuration list for PBXNativeTarget "kot_tests" */;
+			buildPhases = (
+				7E8162B11AE2E1E8004AD1B3 /* Sources */,
+				7E8162B21AE2E1E8004AD1B3 /* Frameworks */,
+				7E8162B31AE2E1E8004AD1B3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kot_tests;
+			productName = kot_tests;
+			productReference = 7E8162B51AE2E1E8004AD1B3 /* kot_tests */;
+			productType = "com.apple.product-type.tool";
+		};
 		7EB8B6321AE058DF005B9044 /* kot_ton */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EB8B63A1AE058DF005B9044 /* Build configuration list for PBXNativeTarget "kot_ton" */;
@@ -107,6 +157,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = nekocode;
 				TargetAttributes = {
+					7E8162B41AE2E1E8004AD1B3 = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					7EB8B6321AE058DF005B9044 = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -125,11 +178,20 @@
 			projectRoot = "";
 			targets = (
 				7EB8B6321AE058DF005B9044 /* kot_ton */,
+				7E8162B41AE2E1E8004AD1B3 /* kot_tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E8162B11AE2E1E8004AD1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E8162B81AE2E1E8004AD1B3 /* test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7EB8B62F1AE058DF005B9044 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +203,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		7E8162BA1AE2E1E8004AD1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7E8162BB1AE2E1E8004AD1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7EB8B6381AE058DF005B9044 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -242,6 +324,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E8162B91AE2E1E8004AD1B3 /* Build configuration list for PBXNativeTarget "kot_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E8162BA1AE2E1E8004AD1B3 /* Debug */,
+				7E8162BB1AE2E1E8004AD1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7EB8B62E1AE058DF005B9044 /* Build configuration list for PBXProject "kot_ton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
