@@ -222,7 +222,7 @@ int main( int argc, char ** argv ) {
  *  Error message.
  */
 void com_error( const char * err ) {
-    std::wcout << err << "\n";
+    std::cout << err << "\n";
 
     com_pause();
 }
