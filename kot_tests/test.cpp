@@ -26,6 +26,9 @@ const wchar_t EN_LAL = L'z';
 const wchar_t RU_FAL = L'а';    // Russian.
 const wchar_t RU_LAL = L'я';
 
+const char * LOC_CHOOSE_DICT = "Введите путь и имя файла который содержит словарь: ";
+const char * LOC_CHOOSE_WORDS = "Введите путь и имя файла который содержит исходное и конечное слово: ";
+
 // #define USE_ANY_PAUSE
 // #define USE_ENGLISH_FOR_TEST
 
@@ -85,9 +88,9 @@ TEST_CASE( "Main application", "main" ) {
     
     INFO( "Getting file names.. " );
 #ifdef USE_ANY_PAUSE
-    std::cout << "Введите путь и имя файла который содержит исходное и конечное слово: " << "\n";
+    std::cout << LOC_CHOOSE_WORDS << "\n";
     std::cin >> word_file;
-    std::cout << "Введите путь и имя файла который содержит словарь: " << "\n";
+    std::cout << LOC_CHOOSE_DICT << "\n";
     std::cin >> dict_file;
 #else 
 #ifndef USE_ENGLISH_FOR_TEST

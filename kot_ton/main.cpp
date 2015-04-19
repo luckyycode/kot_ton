@@ -49,10 +49,6 @@ void com_error( const char * err );
 //  Wait for user input.
 void com_pause();
 
-//
-//  String to wide string.
-std::wstring to_wstr( std::string & s );
-
 int main( int argc, char ** argv ) {
 
     //
